@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="my-4">Cadastro de Cliente</h1>
+
+        <div id="alert-container" class="alert fade" role="alert">
+            <strong id="alert-title"></strong>
+            <span id="alert-message"></span>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" required/>
+            </div>
+            <div class="form-group">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" required/>
+            </div>
+            <div class="form-group">
+                <label for="documento">Documento</label>
+                <input type="text" class="form-control" id="documento" required/>
+            </div>
+            <button type="button" class="btn btn-success" onclick="post()">Cadastrar</button>
+            <button type="button" class="btn btn-primary ml-2" onclick="get()">Consultar todos</button>
+        </form>
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Documento</th>
+                </tr>
+            </thead>
+            <tbody id="clientes">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scrips.js"></script>
+</body>
+
+</html>
